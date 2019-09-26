@@ -1,6 +1,6 @@
 {
   "title": "html2canvas",
-  "name": "html2canvas",
+  "name": "html2canvas-with-auth",
   "description": "Screenshots with JavaScript",
   "main": "dist/npm/index.js",
   "module": "dist/html2canvas.js",
@@ -44,7 +44,7 @@
     "flow-bin": "0.56.0",
     "glob": "7.1.2",
     "html2canvas-proxy": "1.0.1",
-    "jquery": "3.2.1",
+    "jquery": "^3.4.1",
     "js-polyfills": "^0.1.42",
     "karma": "^4.0.1",
     "karma-chrome-launcher": "^2.2.0",

@@ -18,6 +18,7 @@ export const Proxy = (src: string, options: Options): Promise<string> => {
         xhr.onload = () => {
             if (xhr instanceof XMLHttpRequest) {
                 if (xhr.status === 200) {
+                    if (options.onSuccess) options.onSuccess(xhr);
                     if (responseType === 'text') {
                         resolve(xhr.response);
                     } else {
@@ -33,9 +34,9 @@ export const Proxy = (src: string, options: Options): Promise<string> => {
                         __DEV__
                             ? `Failed to proxy resource ${src.substring(
                                   0,
-                                  256
+                                  256,
                               )} with status code ${xhr.status}`
-                            : ''
+                            : '',
                     );
                 }
             } else {
@@ -45,6 +46,11 @@ export const Proxy = (src: string, options: Options): Promise<string> => {
 
         xhr.onerror = reject;
         xhr.open('GET', `${proxy}?url=${encodeURIComponent(src)}&responseType=${responseType}`);
+        if (options.headers) {
+            Object.keys(options.headers).forEach(key =>
+                xhr.setRequestHeader(key, options.headers[key]),
+            );
+        }
 
         if (responseType !== 'text' && xhr instanceof XMLHttpRequest) {
             xhr.responseType = responseType;
