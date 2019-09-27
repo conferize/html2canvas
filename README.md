@@ -4,7 +4,7 @@ This is a fork of html2canvas
 
 This project is a fork of [html2canvas](https://github.com/niklasvh/html2canvas) project. The additional parameters were added to expand image proxy settings, for example, passing on the authorization header to proxy. In particular `options` accepts the following settings:
 - `headers` proxy server request headers
-- `onSuccess` callback will be called after the successfull response from the proxy server.
+- `onSuccess` callback will be called after the successful response from the proxy server.
 
 The fixes done in the `proxy-with-auth` branch made from the `v1.0.0-rc.1` mainstream repository tag, that should be used until the main repository fixes all proxy related issues.
 

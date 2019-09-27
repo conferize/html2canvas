@@ -48,6 +48,7 @@ export const Proxy = (src: string, options: Options): Promise<string> => {
         xhr.open('GET', `${proxy}?url=${encodeURIComponent(src)}&responseType=${responseType}`);
         if (options.headers) {
             Object.keys(options.headers).forEach(key =>
+                // $FlowFixMe
                 xhr.setRequestHeader(key, options.headers[key]),
             );
         }

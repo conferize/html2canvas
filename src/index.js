@@ -28,7 +28,9 @@ export type Options = {
     scrollX: number,
     scrollY: number,
     windowWidth: number,
-    windowHeight: number
+    windowHeight: number,
+    headers?: {[index: string]: string},
+    onSuccess?: (xhr: Object) => any,
 };
 
 const html2canvas = (element: HTMLElement, conf: ?Options): Promise<*> => {
