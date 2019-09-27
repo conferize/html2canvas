@@ -11,6 +11,12 @@
     "email": "niklasvh@gmail.com",
     "url": "https://hertzen.com"
   },
+  "contributors": [
+    {
+      "name": "Kateryna Musina",
+      "email": "kate.kotsar@gmail.com"
+    }
+  ],
   "engines": {
     "node": ">=4.0.0"
   },

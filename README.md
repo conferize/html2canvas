@@ -1,9 +1,21 @@
+
+This is a fork of html2canvas
+===========
+
+This project is a fork of [html2canvas](https://github.com/niklasvh/html2canvas) project. The additional parameters were added to expand image proxy settings, for example, passing on the authorization header to proxy. In particular `options` accepts the following settings:
+- `headers` proxy server request headers
+- `onSuccess` callback will be called after the successfull response from the proxy server.
+
+The fixes done in the `proxy-with-auth` branch made from the `v1.0.0-rc.1` mainstream repository tag, that should be used until the main repository fixes all proxy related issues.
+
+
+
 html2canvas
 ===========
 
 [Homepage](https://html2canvas.hertzen.com) | [Downloads](https://github.com/niklasvh/html2canvas/releases) | [Questions](http://stackoverflow.com/questions/tagged/html2canvas?sort=newest) | [Donate](https://www.gittip.com/niklasvh/)
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/niklasvh/html2canvas?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/niklasvh/html2canvas?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Build Status](https://dev.azure.com/niklasvh/html2canvas/_apis/build/status/niklasvh.html2canvas?branchName=master)](https://dev.azure.com/niklasvh/html2canvas/_build/latest?definitionId=1&branchName=master)
 [![NPM Downloads](https://img.shields.io/npm/dm/html2canvas.svg)](https://www.npmjs.org/package/html2canvas)
 [![NPM Version](https://img.shields.io/npm/v/html2canvas.svg)](https://www.npmjs.org/package/html2canvas)
